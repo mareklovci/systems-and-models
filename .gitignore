@@ -1,2 +1,8 @@
-# Temporary files
+# MATLAB
 *.asv
+*.autosave
+*.mat
+*.l
+
+# IDEs
+.vscode
