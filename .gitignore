@@ -3,6 +3,7 @@
 *.autosave
 *.mat
 *.l
+slprj/
 
 # IDEs
 .vscode
