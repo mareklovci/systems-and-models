@@ -4,6 +4,7 @@
 *.mat
 *.l
 slprj/
+*.bak
 
 # IDEs
 .vscode
