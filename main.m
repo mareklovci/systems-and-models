@@ -38,7 +38,7 @@ data2graphs(linearized, 'linerized')
 
 % !warning! This procedure can only be used in this case because the 
 % linearized model is the same as the transfer function of the system!
-% That means, that system itselves is already linear!
+% That means, that system itself is already linear!
 
 Fe = 10; % according to assignment, the there should be initial force
 Cm = [0 0 0 0; 0 0 0 0; 0 0 1 0; 0 0 0 0]; % output only m position
