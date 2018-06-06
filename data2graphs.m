@@ -13,10 +13,23 @@ elseif strcmp(type, 'diff')
 end
     
 time = data.Time;
-positionU = data.Data(:,1);
-velocityU = data.Data(:,2);
-positionY = data.Data(:,3);
-velocityY = data.Data(:,4);
+
+if strcmp(type, 'simscape1')
+    positionU = data.Data(:,1);
+    velocityU = data.Data(:,4);
+    positionY = data.Data(:,7);
+    velocityY = data.Data(:,10);
+elseif strcmp(type, 'linerized')
+    positionU = data.Data(:,1);
+    velocityU = data.Data(:,2);
+    positionY = data.Data(:,3) + 1;
+    velocityY = data.Data(:,4);
+else
+    positionU = data.Data(:,1);
+    velocityU = data.Data(:,2);
+    positionY = data.Data(:,3);
+    velocityY = data.Data(:,4);
+end
 
 figure
 

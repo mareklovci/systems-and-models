@@ -15,21 +15,23 @@ dy0 = 0;
 
 simtime = 30;
 
+%% Models
+
 % simscape - 2nd generation
-sim('model1', simtime)
-data2graphs(simscape, 'simscape2')
+% sim('model1', simtime)
+% data2graphs(simscape, 'simscape2')
 
 % simulink - differential equations
 sim('model2', simtime)
 data2graphs(differential, 'diff')
 
 % simscape - 1st generation
-sim('model3', simtime)
+sim('model3_new', simtime)
 data2graphs(simscape1, 'simscape1')
 
 % linearized
 [A, B, C, D] = linearize(m, M, k, b);
-initcond = [0 0 y0 0]; % [0 0 y0 0] - natazena pruzina, [0 0 0 0] - n.p.p.
+initcond = [0 0 0 0]; % [0 0 y0 0] - natazena pruzina, [0 0 0 0] - n.p.p.
 
 sim('model4', simtime)
 data2graphs(linearized, 'linerized')
